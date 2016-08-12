@@ -795,10 +795,10 @@ function StormOnDemand_ConfigOptions()
             )
         );
 
-        //Maximal IPs Number
+        //Maximum IP Addresses
         $configurable_options[9] = array
         (
-            'Name'      => 'Maximal IPs Number|Maximal IPs Number',
+            'Name'      => 'Maximum IP Addresses|Maximum IP Addresses',
             'Type'      => 'select',
             'Values'    => array
             (
@@ -1202,7 +1202,7 @@ function StormOnDemand_ConfigOptions()
             'Size'          => '25',
             'Default'       => 1
         ),
-        "Maximal IPs Number"=> array
+        "Maximum IP Addresses"=> array
         (
             'Type'          => 'text',
             'Size'          => '25',
@@ -1321,9 +1321,9 @@ function StormOnDemand_ConfigOptions()
             'type'       => 'text',
             'name'       => 'packageconfigoption['.(array_search('IPs Number', $configFormKeys)+1).']',
         ),
-        'maximal_ips_number'=> array(
+        'maximum_ips_number'=> array(
             'type'       => 'text',
-            'name'       => 'packageconfigoption['.(array_search('Maximal IPs Number', $configFormKeys)+1).']',
+            'name'       => 'packageconfigoption['.(array_search('Maximum IP Addresses', $configFormKeys)+1).']',
         ),
         'monitoring'     => array(
             'type'       => 'checkbox',
@@ -2666,7 +2666,7 @@ function StormOnDemand_IPManagement($params)
     //get configuration
     $username   =   StormOnDemand_getOption('Username', $params);
     $password   =   StormOnDemand_getOption('Password', $params);
-    $ipcount    =   StormOnDemand_getOption("Maximal IPs Number", $params);
+    $ipcount    =   StormOnDemand_getOption("Maximum IP Addresses", $params);
 
     //we need uniq_id to terminate server
     $q = mysql_query("SELECT * FROM mg_storm_on_demand WHERE hosting_id = ".(int)$params['serviceid']);

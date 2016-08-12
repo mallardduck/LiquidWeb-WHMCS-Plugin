@@ -189,10 +189,10 @@ function StormOnDemandPrivateParent_ConfigOptions()
 
         /*
 
-        $max_ips = $product->getConfig('Maximal IPs Number');
+        $max_ips = $product->getConfig('Maximum IP Addresses');
         if($max_ips != null){
           for($i=1;$i<=$max_ips;$i++){
-            $product->defaultConfigurableOptions['mygroup']['fields']['Maximal IPs Number']['options'][] = array
+            $product->defaultConfigurableOptions['mygroup']['fields']['Maximum IP Addresses']['options'][] = array
             (
                 'value' =>  $i,
                 'title' =>  $i
@@ -1791,7 +1791,7 @@ function StormOnDemandPrivateParent_IPManagement($params)
     //get configuration
     $username   =   StormOnDemandPrivateParent_getOption('Username', $params);
     $password   =   StormOnDemandPrivateParent_getOption('Password', $params);
-    $ipcount    =   StormOnDemandPrivateParent_getOption("Maximal IPs Number", $params);
+    $ipcount    =   StormOnDemandPrivateParent_getOption("Maximum IP Addresses", $params);
 
     //we need uniq_id to terminate server
     $uniq_id = $params['customfields']['uniq_id'];
