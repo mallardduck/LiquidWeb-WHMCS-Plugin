@@ -572,7 +572,7 @@ if ((isset($_REQUEST['module']) && $_REQUEST['module']=='StormBilling') && (isse
             }
 
             $data['Backup Quota'] = $_POST['setup_lw_spp_ipsbackupquota'];
-            $data['Maximum IPs Number'] = $_POST['setup_lw_ips'];
+            $data['Maximum Number of IPs'] = $_POST['setup_lw_ips'];
             $data['Bandwidth Quota'] = $_POST['setup_lw_spp_bandwidthquota'];
             $data['Monitoring'] = $monitoring;
             $data['Firewall'] = $firewall;
@@ -739,7 +739,7 @@ if ((isset($_REQUEST['module']) && $_REQUEST['module']=='StormBilling') && (isse
             else if (trim($res['field_name']) == 'description') { $private_parent['description'] = $res['field_value']; }
             /*
             else if (trim($res['field_name']) == 'Parent') { $private_parent['parent'] = $res['field_value']; }
-            else if (trim($res['field_name']) == 'Maximum IPs Number') { $private_parent['maximum_ips_number'] = $res['field_value']; }
+            else if (trim($res['field_name']) == 'Maximum Number of IPs') { $private_parent['maximum_ips_number'] = $res['field_value']; }
             */
         }
         $private_parent['page5_action'] = '';

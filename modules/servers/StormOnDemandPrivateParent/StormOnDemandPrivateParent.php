@@ -200,7 +200,7 @@ function StormOnDemandPrivateParent_ConfigOptions()
           }
         }
 
-        $IPs_Number = $product->getConfig('IPs Number');
+        $IPs_Number = $product->getConfig('Number of IPs');
 
         if($IPs_Number != null){
           for($i=1;$i<=$IPs_Number;$i++){
@@ -695,7 +695,7 @@ function StormOnDemandPrivateParent_CreateAccount($params)
 
     $configuration = array
     (
-        'new_ips'           =>  StormOnDemandPrivateParent_getOption("IPs Number", $params),
+        'new_ips'           =>  StormOnDemandPrivateParent_getOption("Number of IPs", $params),
         'image_id'          =>  StormOnDemandPrivateParent_getOption('Image', $params),
         'bandwidth_quota'   =>  ($bandwidth_quota == 'Pay as You Go') ? 0 : $bandwidth_quota,
         'parent'            =>  $parent,
@@ -1096,7 +1096,7 @@ function StormOnDemandPrivateParent_ChangePackage($params)
     //get configuration
     $username           =   StormOnDemandPrivateParent_getOption('Username', $params);
     $password           =   StormOnDemandPrivateParent_getOption('Password', $params);
-    $ipcount            =   StormOnDemandPrivateParent_getOption("IPs Number", $params);
+    $ipcount            =   StormOnDemandPrivateParent_getOption("Number of IPs", $params);
     $bandwidth_quota    =   StormOnDemandPrivateParent_getOption('Bandwidth Quota', $params);
     $hostname           =   $params['customfields']['hostname'] ? $params['customfields']['hostname'] : $params['domain'];
     $memory             =   StormOnDemandPrivateParent_getOption('Memory', $params);

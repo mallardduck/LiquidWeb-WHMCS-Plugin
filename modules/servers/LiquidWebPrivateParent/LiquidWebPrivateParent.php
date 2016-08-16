@@ -201,11 +201,11 @@ function LiquidWebPrivateParent_ConfigOptions()
           }
         }
 
-        $IPs_Number = $product->getConfig('IPs Number');
+        $IPs_Number = $product->getConfig('Number of IPs');
 
         if($IPs_Number != null && is_numeric($IPs_Number)){
           for($i=1;$i<=$IPs_Number;$i++){
-            $product->defaultConfigurableOptions['mygroup']['fields']['IPs Number']['options'][] = array
+            $product->defaultConfigurableOptions['mygroup']['fields']['Number of IPs']['options'][] = array
             (
                 'value' =>  $i,
                 'title' =>  $i
@@ -699,7 +699,7 @@ function LiquidWebPrivateParent_CreateAccount($params)
 
     $configuration = array
     (
-        'new_ips'           =>  LiquidWebPrivateParent_getOption("IPs Number", $params),
+        'new_ips'           =>  LiquidWebPrivateParent_getOption("Number of IPs", $params),
         'image_id'          =>  LiquidWebPrivateParent_getOption('Image', $params),
         'bandwidth_quota'   =>  $bandwidth_quota,
         'parent'            =>  $parent,
@@ -1101,7 +1101,7 @@ function LiquidWebPrivateParent_ChangePackage($params)
     //get configuration
     $username           =   LiquidWebPrivateParent_getOption('Username', $params);
     $password           =   LiquidWebPrivateParent_getOption('Password', $params);
-    $ipcount            =   LiquidWebPrivateParent_getOption("IPs Number", $params);
+    $ipcount            =   LiquidWebPrivateParent_getOption("Number of IPs", $params);
     $bandwidth_quota    =   LiquidWebPrivateParent_getOption('Bandwidth Quota', $params);
     $hostname           =   $params['customfields']['hostname'] ? $params['customfields']['hostname'] : $params['domain'];
     if ($hostname == '') {

@@ -124,9 +124,9 @@ class StormOnDemandPrivateParentProduct extends StormOnDemand_Product
             'type'                      =>  'text',
             'default'                   =>  0
         ),
-        'IPs Number'                    =>  array
+        'Number of IPs'                 =>  array
         (
-            'title'                     =>  'IPs Number',
+            'title'                     =>  'Number of IPs',
             'type'                      =>  'text',
             'default'                   =>  1
         ),
@@ -330,9 +330,9 @@ class StormOnDemandPrivateParentProduct extends StormOnDemand_Product
                         )
                     )
                 ),
-                'IPs Number'            =>  array
+                'Number of IPs'         =>  array
                 (
-                    'title'             =>  'IPs Number',
+                    'title'             =>  'Number of IPs',
                     'type'              =>  'select',
                     'options'           =>  array
                     (
@@ -538,7 +538,7 @@ class StormOnDemandPrivateParentProduct extends StormOnDemand_Product
 
         'ips_number' =>  array(
 				'type'  => 'text',
-				'name'	=> 'customconfigoption[IPs Number]',
+				'name'	=> 'customconfigoption[Number of IPs]',
         ),
 
         'maximum_ips_number' =>  array(
